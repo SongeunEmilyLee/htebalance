@@ -6,25 +6,16 @@ treatment effect (HTE) estimates in randomized experiments.
 This package goes with my paper, "Estimating Heterogeneous Treatment Effects
 under Subgroup Imbalance."
 
-## Why this package?
 
-Political scientists often want to know whether a treatment works differently
-for White, Black, Latino, and Asian respondents. But these groups are rarely
-equally represented in experimental samples. Even in a large experiment, some
-groups may have fewer than 50 respondents. Once we divide them into treatment
-and control groups, the sample sizes become even smaller.
+### Why this package?
 
-There are two things to consider:
+Political scientists often want to know whether treatment effects differ across racial and ethnic groups. But in practice, these groups are rarely equally represented in experimental samples. For example, an experiment may have hundreds of White respondents but only a few dozen Asian respondents. Once we split each group into treatment and control, the sample sizes become even smaller.
 
-- **Group size:** Small groups have fewer observations, so their treatment
-  effects are estimated less precisely.
-- **Group share:** Small groups make up less of the full sample, so they may
-  have less influence on how a model is fitted.
+This creates two problems. First, smaller groups have fewer observations (**group size**), making their treatment effects harder to estimate precisely. Second, these groups make up a smaller share of the full sample (**group share**), so they may have less influence on models fitted using the full sample. As a result, the choice of estimation method can matter, especially for smaller groups.
 
-In my paper, I reviewed experiments on race and ethnicity published in the
-*APSR*, *AJPS*, and *JOP* since 2015. Among 89 experimental comparisons with at
-least two racial groups, 42% had a smallest group with fewer than 50
-respondents.
+This is not an unusual problem. In my review of race and ethnicity experiments published in the *APSR*, *AJPS*, and *JOP* since 2015, 42% of 89 experimental comparisons had at least one racial group with fewer than 50 respondents.
+
+I developed `htebalance` to help researchers deal with these challenges. The package makes it easier to examine subgroup sizes and imbalance, compare different HTE estimators, and see how sensitive their results are to the methods they choose.
 
 ![Racial subgroup imbalance in political science experiments](man/figures/paper-imbalance.png)
 
