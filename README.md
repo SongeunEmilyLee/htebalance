@@ -1,4 +1,4 @@
-# htebalance
+# htebalance (v0.1.0)
 
 An R package for checking subgroup imbalance and comparing heterogeneous
 treatment effect (HTE) estimates in randomized experiments.
