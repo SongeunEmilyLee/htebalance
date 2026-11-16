@@ -1,0 +1,24 @@
+Package: htebalance
+Type: Package
+Title: Diagnosing Subgroup Imbalance and HTE Sensitivity
+Version: 0.1.0
+Authors@R: person("Songeun Emily", "Lee", role = c("aut", "cre"),
+    email = "selee4@uh.edu")
+Description: Before reporting treatment effects for prespecified subgroups in
+    randomized experiments, researchers can check how much information each
+    group provides and how sensitive their conclusions are to the choice of
+    estimator. The package reports subgroup sizes, shares, treated and control
+    cell counts, effective sample sizes, difference-in-means estimates with
+    standard errors and minimum detectable effects; compares group average
+    treatment effects and between-group contrasts across subgroup means,
+    interacted OLS, causal forests, and BART; and writes a plain-language
+    summary of the results. Small subgroup size and small subgroup share are
+    reported separately.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+Imports: stats, utils, graphics
+Suggests: grf, dbarts, testthat (>= 3.0.0)
+Config/testthat/edition: 3
+URL: https://github.com/SongeunEmilyLee/htebalance
+BugReports: https://github.com/SongeunEmilyLee/htebalance/issues

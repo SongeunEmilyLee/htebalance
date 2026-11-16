@@ -1,0 +1,8 @@
+export(diagnose_imbalance)
+export(compare_hte)
+export(hte_report)
+S3method(print, hte_imbalance)
+S3method(print, hte_compare)
+S3method(plot, hte_compare)
+S3method(print, hte_report)
+S3method(format, hte_report)
